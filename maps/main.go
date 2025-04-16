@@ -30,4 +30,27 @@ func main() {
 		fmt.Printf("Coordinates: %.5f, %.5f\n", value.X, value.Y)
 		fmt.Println()
 	}
+
+	a := map[string]string{
+		"mode": "production",
+	}
+
+	// Check that the key "mode" exists AND that its value is not "development".
+	if mode, ok := a["mode"]; ok && mode != "development" {
+		fmt.Println("Operating mode is set and is not 'development':", mode)
+	} else {
+		fmt.Println("Mode is either not set or is 'development'")
+	}
+
+	scores := map[string]int{
+		"Alice": 95,
+		"Bob":   82,
+	}
+
+	// Retrieve score for "Alice" if it exists.
+	if score, ok := scores["Alice"]; ok {
+		fmt.Println("Alice's score is", score)
+	} else {
+		fmt.Println("Score for Alice not found")
+	}
 }

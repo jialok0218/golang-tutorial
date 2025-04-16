@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func do(i interface{}) {
+func stuff(i interface{}) {
 	switch v := i.(type) {
 	case int:
 		fmt.Printf("Twice %v is %v\n", v, v*2)
@@ -14,7 +14,8 @@ func do(i interface{}) {
 }
 
 func main() {
-	do(21)
-	do("hello")
-	do(true)
+	stuff(21)
+	stuff("hello")
+	stuff(true)
+	stuff(false)
 }
